@@ -2,6 +2,11 @@
 
 This is a simple React contact application that allows users to see a list of contacts fetched form an API call. Upon clicking any contact, their details show up on the page in a two-column layout. Certain pages are shown as Coming Soon. There is a non-functional chat functionality which shows a list of contacts and opens a chat window when contact is clicked. 
 
+
+##### Deployment Link
+[https://akhil-saxena.github.io/contact-app/](https://akhil-saxena.github.io/contact-app/)
+
+
 ## Features
 
 - Display list of contacts fetched from an API call.
