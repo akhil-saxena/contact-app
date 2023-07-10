@@ -1,0 +1,97 @@
+.chat-container {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+  width: 200px;
+  transition: height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.chat-container.expanded {
+  height: 250px;
+}
+
+.chat-toggle {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  background-color: #2c65c8;
+  color: #f0f0f0;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.chat-icon {
+  margin-left: 10px;
+  margin-right: 15px;
+  color: #f1f1f1
+}
+
+.arrow-icon {
+  margin-left: auto;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+}
+
+.arrow-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.contact-list-chat {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.contact-item-chat {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contact-item-chat:last-child {
+  border-bottom: none;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.status-indicator.active {
+  background-color: green;
+}
+
+.contact-item.active {
+  background-color: #f0f0f0;
+}
+
+.contact-image-chat {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.contact-image-chat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ContactList from './Components/ContactList/ContactList';
+import ContactDetails from './Components/ContactDetails/ContactDetails';
 
-function App() {
+const App = () => {
+  const [selectedContact, setSelectedContact] = useState(null);
+
+  const handleContactSelect = (contact) => {
+    setSelectedContact(contact);
+  };
+
+  const handleContactDeselect = () => {
+    setSelectedContact(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {selectedContact ? (
+        <div className="contact-details-container">
+          <ContactDetails
+            contact={selectedContact}
+            onDeselectContact={handleContactDeselect}
+          />
+        </div>
+      ) : (
+        <div className="container">
+          <div className="heading">Select an account</div>
+          <div className="contact-list">
+            <ContactList onSelectContact={handleContactSelect} />
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
