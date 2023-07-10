@@ -49,14 +49,6 @@
   background-color: #555;
 }
 
-.contact-image-large {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 10px;
-}
-
 .navigation-menu-container {
   width: 200px;
   position: sticky;

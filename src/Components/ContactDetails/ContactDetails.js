@@ -148,7 +148,7 @@ const ContactDetails = ({ contact, onDeselectContact }) => {
                     {selectedMenuItem === 'Profile' && (
                         <>
                             <div className="profile-data">
-                                <h3 className="title">Address</h3>
+                                <h3 className="title" style={{justifyContent: "left"}}>Address: </h3>
                                 <p>
                                     <span className="key">Street:</span> {street}
                                 </p>
